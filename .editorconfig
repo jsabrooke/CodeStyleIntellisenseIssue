@@ -1,0 +1,11 @@
+root = true
+
+[*.{cs}]
+dotnet_analyzer_diagnostic.category-Style.severity = warning
+dotnet_style_prefer_collection_expression = true:silent
+
+# :none instead of :silent actually works but then you'd lose the suggestion in quick actions.
+
+# I'm trying to avoid mixing these rule severity levels with the options severity levels,
+# as per https://github.com/dotnet/roslyn/issues/52991#issuecomment-1960692440.
+#dotnet_diagnostic.IDE0300.severity = silent
